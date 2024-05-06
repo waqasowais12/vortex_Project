@@ -1,0 +1,185 @@
+@charset "UTF-8";
+.square-blocks-simple, .square-blocks-simple .el {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+}
+*:not(.top-title) + .square-blocks-simple {
+		margin-top: var(--blocks-margin);
+}
+.square-blocks-simple {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+}
+.square-blocks-simple .el {
+		border-radius: 30px;
+		border: 1px solid var(--border-grey);
+		text-align: center;
+		background-color: var(--white);
+		padding: 60px 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.4;
+		overflow: hidden;
+		backface-visibility: hidden;
+}
+.square-blocks-simple .el.with-bg:after {
+		content: '';
+		pointer-events: none;
+		flex: 1 0 auto;
+		align-self: stretch;
+		margin: auto -40px -80px -40px;
+		position: relative;
+		top: -20px;
+		min-height: 65px;
+		background-repeat: no-repeat;
+}
+.square-blocks-simple .bg1:after, .square-blocks-simple .bg3:after {
+		background-image: url("../img/bg-squares/mix-purple.svg");
+		background-size: auto 167px;
+		max-height: 214px;
+}
+.square-blocks-simple .bg1:after {
+		background-position: 100% 0;
+}
+.square-blocks-simple .bg3:after {
+		background-position: 45% 0;
+}
+.square-blocks-simple .bg2:after {
+		background-image: url("../img/bg-squares/mix-green2.svg");
+		background-size: auto 222px;
+		min-height: 100px !important;
+		max-height: 242px;
+		background-position: calc(100% - 40px) 0;
+}
+.square-blocks-simple .bg4:after {
+		background-image: url("../img/bg-squares/mix-blue.svg");
+		background-size: auto 224px;
+		max-height: 260px;
+		background-position: 50% 10px;
+}
+.square-blocks-simple .bg5:after {
+		background-image: url("../img/bg-squares/mix-green1.svg");
+		background-size: auto 222px;
+		max-height: 260px;
+		min-height: 80px !important;
+		background-position: 40px 10px;
+}
+.square-blocks-simple .title {
+		font-size: 27px;
+}
+.square-blocks-simple .text {
+		color: var(--grey);
+}
+@media only screen and (min-width: 768px) {
+		.square-blocks-simple {
+				grid-template-columns: repeat(2, 1fr);
+		}
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+		.square-blocks-simple.wid3 .el.wide {
+				grid-column: 1/-1;
+		}
+}
+@media only screen and (min-width: 1280px) {
+		.square-blocks-simple.wid3 {
+				grid-template-columns: repeat(3, 1fr);
+		}
+}
+.square-blocks-simple .mini-checklist {
+		font-size: 14px;
+		line-height: 1.4;
+		gap: 10px;
+}
+.square-blocks-simple .mini-checklist:not(:first-child) {
+		margin-top: 15px;
+}
+.square-blocks-simple .mini-checklist li {
+		background-image: url("../img/done-black.svg");
+		background-size: auto 18px;
+		background-position: 0 calc(0.7em - 9px);
+		padding-left: 30px;
+}
+.square-blocks-simple .el.to-left {
+		align-items: flex-start;
+		justify-content: flex-start;
+		text-align: left;
+}
+.square-blocks-simple .el.to-left .mini-checklist {
+		flex-direction: column;
+		align-items: flex-start;
+}
+.square-blocks-simple .inner-list, .square-blocks-simple .inner-list li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+}
+.square-blocks-simple .inner-list {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.1;
+		color: var(--black);
+		letter-spacing: -0.03em;
+		gap: 25px;
+		width: 100%;
+		flex: 0 0 auto;
+}
+.square-blocks-simple .inner-list:not(:first-child) {
+		margin-top: 25px;
+}
+.square-blocks-simple .inner-list li {
+		flex: 0 0 auto;
+		max-width: 100%;
+		text-wrap: balance;
+		overflow-wrap: break-word;
+}
+.square-blocks-simple .inner-list .title {
+		color: var(--grey);
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.1;
+		margin: 0 0 8px 0;
+}
+.square-blocks-simple .inner-list .small {
+		font-size: 14px;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
+		color: var(--grey);
+		font-weight: normal;
+		margin: 5px 0 0 0;
+}
+.square-blocks-simple .inner-list .reversed {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		justify-content: flex-end;
+}
+.square-blocks-simple .inner-list li.big, .square-blocks-simple .inner-list li.medium {
+		min-height: 106px;
+		padding-top: 20px;
+		letter-spacing: -0.03em;
+}
+.square-blocks-simple .inner-list li.big {
+		font-size: 30px;
+}
+.square-blocks-simple .inner-list li.medium {
+		font-size: 24px;
+}
+.square-blocks-simple a:not(.btn) {
+		text-decoration: none;
+}
+@media (pointer:fine) {
+		.square-blocks-simple a:not(.btn):hover {
+				text-decoration: underline;
+		}
+}

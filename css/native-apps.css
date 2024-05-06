@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.native-apps, .native-apps .el {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+}
+.native-apps {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+}
+.native-apps .el {
+		--padding: 40px;
+		flex: 0 0 auto;
+		width: 100%;
+		border: 1px solid var(--border-grey);
+		border-radius: 30px;
+		padding: var(--padding);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		font-size: 16px;
+		line-height: 1.4;
+		text-align: left;
+		color: var(--black);
+		background: var(--white);
+		container-type: inline-size;
+		container-name: native-apps-el;
+}
+@media only screen and (max-width: 639px) {
+		.native-apps .el {
+				--padding: 20px;
+				align-items: center;
+				text-align: center;
+		}
+		.native-apps .el .app-logo {
+				align-self: center;
+		}
+		.native-apps .download {
+				align-self: stretch;
+				justify-content: center;
+		}
+}
+.native-apps .app-logo {
+		flex: 0 0 auto;
+		align-self: flex-start;
+		border: 1.5px solid var(--border-grey);
+		height: 60px;
+		background: var(--white);
+		border-radius: 30px;
+}
+.native-apps .app-logo img {
+		height: 100%;
+		width: auto;
+}
+.native-apps .title {margin-top: 0;
+		font-size: 27px;
+}
+.native-apps .text {
+		margin-top: -30px;
+}
+.native-apps .download {
+		margin-top: auto;
+		gap: 10px;
+}
+@media only screen and (min-width: 640px) {
+		.native-apps {
+				grid-template-columns: repeat(auto-fill, minmax(452px, 1fr));
+		}
+		@container native-apps-el (min-width: 400px) {
+				.native-apps .app-logo {
+						position: absolute;
+						top: 0;
+						right: 0;
+						margin: var(--padding);
+				}
+				.native-apps .title, .native-apps .text {
+						margin-right: 180px;
+				}
+		}
+}

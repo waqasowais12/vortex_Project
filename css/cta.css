@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.cta {
+		flex: 0 0 auto;
+		width: 100%;
+		background: var(--white);
+}
+.cta .bg {
+		border-radius: 100px 100px 0 0;
+		background: var(--black) url("../img/cta.svg") no-repeat 50% -62px;
+		background-size: 1440px auto;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 100px 0;
+		min-height: 521px;
+		text-align: center;
+}
+@media only screen and (max-width: 767px) {
+		.cta .bg {
+				border-radius: 50px 50px 0 0;
+		}
+}
+.cta .top-title {
+		gap: 20px;
+		line-height: 1.4;
+		font-size: 21px;
+}
+.cta .top-title .h1 {
+		line-height: 1.2;
+}
+.cta .top-title-text {
+		opacity: 0.5;
+}
+.cta .top-title-btns {
+		margin-top: 10px;
+}
+.cta .sq-logo {
+		width: 100px;
+		height: 100px;
+		border-radius: 28px;
+		background: radial-gradient(74.5% 74.5% at 50% 11%, #216268 0%, #0D3336 100%);
+		margin: 0 auto 30px auto;
+		box-shadow: 0px 35.499996185302734px 49.999996185302734px -10px #051415;
+}
+.cta .sq-logo:before {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border: 1px solid transparent;
+		background: linear-gradient(180deg, #71BDC3 0%, rgba(27, 115, 122, 0) 100%) border-box;
+		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: destination-out;
+		mask-composite: exclude;
+		border-radius: inherit;
+}
+.cta .sq-logo img {
+		width: 65px;
+		height: 65px;
+}
+@media only screen and (min-width: 1024px) {
+		.cta .h1 {
+				font-size: 44px;
+		}
+}

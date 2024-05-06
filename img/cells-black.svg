@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="107px" viewBox="0 0 102 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="cells-black" transform="translate(0, -0.2)" stroke="#0D3336">
+            <rect id="Rectangle" stroke-opacity="0.3" stroke-width="0.75" transform="translate(51, 53.7966) scale(-1, 1) rotate(-180) translate(-51, -53.7966)" x="7.16790053e-15" y="0.19314307" width="102" height="107.206857"></rect>
+            <polyline id="Path" points="3.47258597 107.341752 5.3759254e-15 107.341752 5.3759254e-15 103.885021"></polyline>
+            <polyline id="Path" points="98.4154482 107.341752 101.888014 107.341752 101.888014 103.885021"></polyline>
+            <polyline id="Path" points="98.4154482 1.99654247e-15 101.888014 1.99654247e-15 101.888014 3.45705206"></polyline>
+            <polyline id="Path" points="3.47258597 1.99654247e-15 5.3759254e-15 1.99654247e-15 5.3759254e-15 3.45705206"></polyline>
+        </g>
+    </g>
+</svg>

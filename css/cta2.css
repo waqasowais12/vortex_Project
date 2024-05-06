@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.cta2 .h1 {
+		font-weight: 500;
+		max-width: 24em;
+}
+.cta2 .top-title, .cta2.top-title {
+		gap: 20px;
+}
+.cta2 .top-title-text {
+		max-width: 44.222222em;
+}
+.cta2 .top-title-btns {
+		margin-top: 10px;
+}
+.cta2 .top-title-btns:not(:last-child) {
+		margin-bottom: 10px;
+}
+.cta2 .top-title-bottom {
+		max-width: 54.16em;
+}@media only screen and (max-width: 767px) {
+	.cta2 .h1{
+		font-size: 24px;
+	}
+}
+@media only screen and (min-width: 768px) {
+		.cta2 .h1.medium {
+				font-size: 33px;
+		}
+		.cta2 .h1.small {
+				font-size: 27px;
+		}
+}
+@media only screen and (min-width: 1024px) {
+		.cta2 .h1 {
+				font-size: 44px;
+		}
+		.cta2 .h1.medium {
+				font-size: 33px;
+		}
+		.cta2 .h1.small {
+				font-size: 27px;
+		}
+}

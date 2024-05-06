@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.inner-hero {
+		background: var(--white);
+		color: var(--black);
+		padding-top: calc(60px + var(--side-padding));
+		padding-bottom: 50px;
+		text-align: center;
+}
+.inner-hero .block {
+		border-radius: 30px;
+		position: relative;
+		padding: 120px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 15px;
+		border: 1px solid var(--border-grey);
+}
+.inner-hero .bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		overflow: hidden;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+		border-radius: inherit;
+}
+.inner-hero .bg:before, .inner-hero .bg:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		transform: translate3d(-50%, 0, 0);
+}
+.inner-hero .bg:before {
+		background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0) 23%, rgba(255, 255, 255, 1) 23%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 77%, rgba(255, 255, 255, 0) 77%, rgba(255, 255, 255, 1) 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 1) 100%);
+		transform: translate3d(-50%, 0, 0) skewX(30deg);
+		width: 133%;
+		min-width: 1000px;
+		opacity: 0.5;
+}
+.inner-hero .bg:after {
+		background: url("../img/inner-hero.svg") no-repeat 50% -102px;
+		background-size: cover;
+}
+.inner-hero .block > *:not(.bg) {
+		position: relative;
+}
+.inner-hero .top-title {
+		margin: 0;
+}
+.inner-hero .top-title-btns {
+		margin-top: 10px;
+}
+@media only screen and (min-width: 1024px) {
+		.inner-hero {
+				padding-top: 140px;
+		}
+		.inner-hero .h1 {
+				font-size: 50px;
+		}
+}
+.inner-hero .top-text {
+		font-weight: 500;
+		font-size: 21px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+}
+.inner-hero .top-title-bottom {
+		font-size: 14px;
+		margin-top: -15px;
+}
+.inner-hero .bottom-text {
+		text-align: center;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.5;
+		color: var(--grey);
+		margin: 20px 0 0 0;
+}
+.inner-hero .bottom-text a {
+		color: var(--black);
+}

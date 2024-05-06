@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.info-block {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+		text-align: left;
+}
+.info-block:not(:last-child) {
+		margin-bottom: var(--blocks-margin);
+}
+.info-block .text {
+		font-size: 14px;
+		line-height: 1.5;
+		color: var(--grey);
+}
+.info-block .title {
+		font-size: 24px;
+		line-height: 1.2;
+		margin: -0.25em 0;
+}
+@media only screen and (min-width: 768px) {
+		.info-block {
+				grid-template-columns: 310px 1fr;
+		}
+}
+@media only screen and (min-width: 1024px) {
+		.info-block {
+				gap: 120px;
+		}
+}

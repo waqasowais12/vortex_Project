@@ -1,0 +1,185 @@
+@charset "UTF-8";
+.list-traders, .list-traders .el {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+}
+.list-traders {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+}
+.list-traders .el {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--border-grey);
+		border-radius: 22px;
+		background: var(--white);
+		overflow: hidden;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+		text-align: left;
+		color: var(--black);
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.4;
+}
+.list-traders .el > * {
+		width: 100%;
+}
+.list-traders .head {
+		flex: 1 0 auto;
+		position: relative;
+		padding: 104px 30px 30px 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		background-size: auto 240px, 100% 100%;
+		background-position: calc(100% + 51px) calc(100% + 88px), 0 0;
+		background-repeat: no-repeat;
+}
+.list-traders .bg-blue .head {
+		background-image: url("../img/bg-squares/blue2.svg"), linear-gradient(180deg, #E0FFF0 0%, #E5FAFF 100%);
+}
+.list-traders .bg-purple .head {
+		background-image: url("../img/bg-squares/purple2.svg"), linear-gradient(178.16deg, #DEDDFF 1.56%, #FFF3F3 98.44%);
+}
+.list-traders .bg-red .head {
+		background-image: url("../img/bg-squares/yellow2.svg"), linear-gradient(178.16deg, #FFBFCA 1.56%, #FFF2B9 98.44%);
+}
+.list-traders .bg-beige .head {
+		background-image: url("../img/bg-squares/beige2.svg"), linear-gradient(180deg, #E5E9F4 0%, #FFF4EC 100%);
+}
+.list-traders .num {
+		pointer-events: none;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		font-weight: 500;
+		font-size: 62px;
+		line-height: 1.2;
+		margin: -0.18em 0;
+		letter-spacing: -0.03em;
+		color: #D2D5E3;
+}
+.list-traders .bg-blue .num {
+		color: #B0DED1;
+}
+.list-traders .bg-purple .num {
+		color: #C0BCE2;
+}
+.list-traders .bg-red .num {
+		color: #EBA5A6;
+}
+.list-traders .tags {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 30px;
+		justify-content: flex-start;
+}
+.list-traders .tags > * {
+		color: var(--l-grey);
+		box-shadow: none !important;
+}
+.list-traders .title {
+		font-size: 24px;
+		font-weight: 500;
+}
+.list-traders .text {
+		flex: 1 0 auto;
+		margin-top: -3px;
+}
+.list-traders .percent {
+		color: var(--green2);
+		background: var(--white);
+		padding: 0 14px;
+		font-weight: 500;
+		font-size: 27px;
+		letter-spacing: -0.03em;
+		align-self: flex-start;
+		height: 48px;
+		line-height: 48px;
+		border-radius: 24px;
+		position: relative;
+		box-shadow: 0px 10px 12px -2px #F1EAEA;
+}
+.list-traders .percent:before {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border: 1px solid transparent;
+		background: linear-gradient(180deg, #FFFFFF 0%, #E2D3D3 100%) border-box;
+		-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: destination-out;
+		mask-composite: exclude;
+		border-radius: inherit;
+}
+.list-traders .bg-blue .percent {
+		box-shadow: 0px 10px 12px -2px #B2E1D299;
+}
+.list-traders .bg-blue .percent:before {
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #ADDFDA 100%);
+}
+.list-traders .bg-purple .percent {
+		box-shadow: 0px 10px 12px -2px #B8B7DC80;
+}
+.list-traders .bg-purple .percent:before {
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #B2B0EC 100%);
+}
+.list-traders .bg-red .percent {
+		box-shadow: 0px 10px 12px -2px #F1D0B2;
+}
+.list-traders .bg-red .percent:before {
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #ECA3A3 100%);
+}
+.list-traders .btn {
+		margin-top: 25px;
+}
+.list-traders .chart {
+		flex: 0 0 auto;
+		width: 100%;
+		padding: 50px 30px;
+}
+.list-traders .profit {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		align-items: flex-start;
+		margin-bottom: 40px;
+}
+.list-traders .profit span {
+		opacity: 0.5;
+}
+.list-traders .profit strong {
+		font-weight: 500;
+		font-size: 27px;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
+		margin: -0.18em 0;
+}
+@media only screen and (min-width: 660px) and (max-width: 767px) {
+		.list-traders .el {
+				flex-direction: row;
+		}
+		.list-traders .el > * {
+				width: 50%;
+				flex: 0 0 auto;
+		}
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+		.list-traders {
+				grid-template-columns: repeat(2, 1fr);
+		}
+}
+@media only screen and (min-width: 1280px) {
+		.list-traders {
+				grid-template-columns: repeat(3, 1fr);
+		}
+}

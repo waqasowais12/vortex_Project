@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.benefits .top-title {
+		font-size: 16px;
+		text-align: left;
+		align-items: flex-start;
+		gap: 40px;
+}
+.benefits .top-title-text {
+		max-width: 34em;
+}
+.benefits .mini-checklist {
+		gap: 10px var(--gap);
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+}
+.benefits .mini-checklist li {
+		background-image: url("../img/done-black.svg");
+}
+@media only screen and (min-width: 768px) {
+		.benefits {
+				display: grid;
+				align-items: flex-start;
+				gap: 60px;
+				grid-template-columns: 1fr 52.58%;
+		}
+		.benefits .top-title {
+				margin: 0;
+		}
+		.benefits {
+				justify-content: flex-start;
+		}
+}
